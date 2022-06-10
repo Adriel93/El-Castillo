@@ -391,9 +391,10 @@ def asotea():
             print("4.Atacar con la estaca")
             print("5.Usar posion de vida")
             print("6.Usar posion de mana")
-            print("7.Huir")
-            print(vidaVamp)
-            print(vidaheroe)
+            print("7.Inventario")
+            print("8.Huir")
+            #print(vidaVamp)
+            #print(vidaheroe)
             if vidaVamp > 0 and vidaheroe > 0 :
                 ataque = int(input("Escoja la opcion: "))
                 if ataque == 1:
@@ -461,6 +462,19 @@ def asotea():
                     else:
                         print("No tienes ninguna posion de mana")
                         continue
+                if ataque == 7:
+                    inventario()
+                    continue
+                if ataque == 8:
+                    print("Sales corriendo en busca de la escalera por donde subiste")
+                    print("Te caes por la escalera, ya que estaba rota")
+                    print("HAS MUERTO")
+                    seleccion = input("Deseas comenzar de nuevo? (y/n)")
+                    if seleccion == "y":
+                        start()
+                        break
+                    elif seleccion == "n":
+                        exit()
             elif vidaheroe <= 0:
                 print("HAS MUERTO")
                 seleccion = input("Deseas comenzar de nuevo? (y/n)")
